@@ -1151,6 +1151,12 @@ extern int __pyx_module_is_main_module;
 int __pyx_module_is_main_module = 0;
 
 /* Implementation of 'module' */
+#if PY_MAJOR_VERSION >= 3
+static const char __pyx_k_[] = "----------------------------------------------------------------------------------------------------";
+#endif
+#if PY_MAJOR_VERSION < 3
+static const char __pyx_k_b[] = "b'----------------------------------------------------------------------------------------------------'";
+#endif
 static const char __pyx_k_end[] = "end";
 static const char __pyx_k_file[] = "file";
 static const char __pyx_k_main[] = "__main__";
@@ -1158,12 +1164,16 @@ static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_Hello[] = "Hello";
 static const char __pyx_k_print[] = "print";
+static const char __pyx_k_cherta[] = "cherta";
 static const char __pyx_k_module[] = "module";
 static const char __pyx_k_my_func[] = "my_func";
 static const char __pyx_k_module_py[] = "module.py";
+static const char __pyx_k_other_module[] = "other module";
 static const char __pyx_k_string_from_func[] = "string from func";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static PyObject *__pyx_n_s_Hello;
+static PyObject *__pyx_kp_s_b;
+static PyObject *__pyx_n_s_cherta;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_end;
 static PyObject *__pyx_n_s_file;
@@ -1172,11 +1182,14 @@ static PyObject *__pyx_n_s_module;
 static PyObject *__pyx_kp_s_module_py;
 static PyObject *__pyx_n_s_my_func;
 static PyObject *__pyx_n_s_name;
+static PyObject *__pyx_kp_s_other_module;
 static PyObject *__pyx_n_s_print;
 static PyObject *__pyx_kp_s_string_from_func;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_pf_6module_my_func(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_codeobj_;
+static PyObject *__pyx_pf_6module_2cherta(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_codeobj__2;
+static PyObject *__pyx_codeobj__3;
 /* Late includes */
 
 /* "module.py":1
@@ -1208,7 +1221,7 @@ static PyObject *__pyx_pf_6module_my_func(CYTHON_UNUSED PyObject *__pyx_self) {
  * def my_func():
  *     return "string from func"             # <<<<<<<<<<<<<<
  * 
- * print("Hello")
+ * def cherta():
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_kp_s_string_from_func);
@@ -1218,6 +1231,60 @@ static PyObject *__pyx_pf_6module_my_func(CYTHON_UNUSED PyObject *__pyx_self) {
   /* "module.py":1
  * def my_func():             # <<<<<<<<<<<<<<
  *     return "string from func"
+ * 
+ */
+
+  /* function exit code */
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "module.py":4
+ *     return "string from func"
+ * 
+ * def cherta():             # <<<<<<<<<<<<<<
+ *     return "-" * 100
+ * 
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_6module_3cherta(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_6module_3cherta = {"cherta", (PyCFunction)__pyx_pw_6module_3cherta, METH_NOARGS, 0};
+static PyObject *__pyx_pw_6module_3cherta(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("cherta (wrapper)", 0);
+  __pyx_r = __pyx_pf_6module_2cherta(__pyx_self);
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_6module_2cherta(CYTHON_UNUSED PyObject *__pyx_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("cherta", 0);
+
+  /* "module.py":5
+ * 
+ * def cherta():
+ *     return "-" * 100             # <<<<<<<<<<<<<<
+ * 
+ * print("Hello")
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __Pyx_INCREF(__pyx_kp_s_b);
+  __pyx_r = __pyx_kp_s_b;
+  goto __pyx_L0;
+
+  /* "module.py":4
+ *     return "string from func"
+ * 
+ * def cherta():             # <<<<<<<<<<<<<<
+ *     return "-" * 100
  * 
  */
 
@@ -1275,6 +1342,12 @@ static struct PyModuleDef __pyx_moduledef = {
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_Hello, __pyx_k_Hello, sizeof(__pyx_k_Hello), 0, 0, 1, 1},
+  #if PY_MAJOR_VERSION >= 3
+  {&__pyx_kp_s_b, __pyx_k_, sizeof(__pyx_k_), 0, 1, 0, 0},
+  #else
+  {&__pyx_kp_s_b, __pyx_k_b, sizeof(__pyx_k_b), 0, 0, 1, 0},
+  #endif
+  {&__pyx_n_s_cherta, __pyx_k_cherta, sizeof(__pyx_k_cherta), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_end, __pyx_k_end, sizeof(__pyx_k_end), 0, 0, 1, 1},
   {&__pyx_n_s_file, __pyx_k_file, sizeof(__pyx_k_file), 0, 0, 1, 1},
@@ -1283,6 +1356,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_module_py, __pyx_k_module_py, sizeof(__pyx_k_module_py), 0, 0, 1, 0},
   {&__pyx_n_s_my_func, __pyx_k_my_func, sizeof(__pyx_k_my_func), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
+  {&__pyx_kp_s_other_module, __pyx_k_other_module, sizeof(__pyx_k_other_module), 0, 0, 1, 0},
   {&__pyx_n_s_print, __pyx_k_print, sizeof(__pyx_k_print), 0, 0, 1, 1},
   {&__pyx_kp_s_string_from_func, __pyx_k_string_from_func, sizeof(__pyx_k_string_from_func), 0, 0, 1, 0},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
@@ -1301,7 +1375,16 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *     return "string from func"
  * 
  */
-  __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_module_py, __pyx_n_s_my_func, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_module_py, __pyx_n_s_my_func, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 1, __pyx_L1_error)
+
+  /* "module.py":4
+ *     return "string from func"
+ * 
+ * def cherta():             # <<<<<<<<<<<<<<
+ *     return "-" * 100
+ * 
+ */
+  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_module_py, __pyx_n_s_cherta, 4, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -1588,7 +1671,7 @@ if (!__Pyx_RefNanny) {
  *     return "string from func"
  * 
  */
-  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_6module_1my_func, 0, __pyx_n_s_my_func, NULL, __pyx_n_s_module, __pyx_d, ((PyObject *)__pyx_codeobj_)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_6module_1my_func, 0, __pyx_n_s_my_func, NULL, __pyx_n_s_module, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_my_func, __pyx_t_1) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -1596,23 +1679,44 @@ if (!__Pyx_RefNanny) {
   /* "module.py":4
  *     return "string from func"
  * 
+ * def cherta():             # <<<<<<<<<<<<<<
+ *     return "-" * 100
+ * 
+ */
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_6module_3cherta, 0, __pyx_n_s_cherta, NULL, __pyx_n_s_module, __pyx_d, ((PyObject *)__pyx_codeobj__3)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 4, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_cherta, __pyx_t_1) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "module.py":7
+ *     return "-" * 100
+ * 
  * print("Hello")             # <<<<<<<<<<<<<<
  * print(my_func())
+ * print('other module')
  */
-  if (__Pyx_PrintOne(0, __pyx_n_s_Hello) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_n_s_Hello) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
 
-  /* "module.py":5
+  /* "module.py":8
  * 
  * print("Hello")
  * print(my_func())             # <<<<<<<<<<<<<<
+ * print('other module')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_my_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_my_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+  /* "module.py":9
+ * print("Hello")
+ * print(my_func())
+ * print('other module')             # <<<<<<<<<<<<<<
+ */
+  if (__Pyx_PrintOne(0, __pyx_kp_s_other_module) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
 
   /* "module.py":1
  * def my_func():             # <<<<<<<<<<<<<<

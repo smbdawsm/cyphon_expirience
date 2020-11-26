@@ -2,4 +2,8 @@ import os
 
 if os.name == 'posix':
     import module
-    import tets.module
+    
+
+print(module.cherta())
+print(module.my_func())
+print(module.cherta())
