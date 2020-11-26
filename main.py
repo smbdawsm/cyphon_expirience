@@ -1,9 +1,15 @@
 import os
 
-if os.name == 'posix':
-    import module
-    
+try:
+        import win.module    
+except (ImportError, NameError):
+    if os.name == 'darwin':
+        pass
+    elif os.name == 'posix':
+        import module
+        print("yep")
 
+  
 print(module.cherta())
 print(module.my_func())
 print(module.cherta())
