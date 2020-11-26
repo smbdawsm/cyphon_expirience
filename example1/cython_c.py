@@ -3,7 +3,7 @@ from distutils.extension import Extension
 from Cython.Distutils import build_ext
 
 ext_modules = [
-    Extension("module", ["module.py"])
+    Extension("py.module", ["py/module.py"])
 ]
 
 setup(
